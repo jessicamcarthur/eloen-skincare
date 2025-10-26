@@ -1,0 +1,93 @@
+html<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OLEHENRIKSEN – Bright Eye Crème</title>
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="src/style.css" />
+
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+
+  <!-- Iconify -->
+  <script src="https://code.iconify.design/iconify-icon/2.0.0/iconify-icon.min.js"></script>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="nav-left">
+      <iconify-icon icon="lucide:menu"></iconify-icon>
+      <iconify-icon icon="lucide:search"></iconify-icon>
+    </div>
+
+    <img class="logo" src="public/logo.png" alt="OLEHENRIKSEN logo">
+
+    <div class="nav-right">
+      <iconify-icon icon="lucide:user"></iconify-icon>
+      <iconify-icon icon="lucide:shopping-bag"></iconify-icon>
+    </div>
+  </header>
+
+  <main class="hero">
+    <img src="public/background.png" alt="Background">
+
+    <div class="product-visual">
+      <canvas id="webgl"></canvas>
+    </div>
+
+    <div class="product-text">
+      <h2>A vitamin c boost<br>to brighten your eyes<br></h2>
+    </div>
+  </main>
+
+  <footer class="scroll-hint">
+    <p>Scroll to discover</p>
+    <div class="line"></div>
+  </footer>
+
+  <!-- Concerns Section -->
+  <section class="concern-section" id="concern-1">
+    <h3 class="concern-text">DEHYDRATION</h3>
+  </section>
+
+  <section class="concern-section" id="concern-2">
+    <h3 class="concern-text">WRINKLES</h3>
+  </section>
+
+  <section class="concern-section" id="concern-3">
+    <h3 class="concern-text">UNEVEN TONE</h3>
+  </section>
+
+  <!-- MOVED OUTSIDE - Fixed position container for ingredient animations -->
+  <div class="ingredient-canvas-container">
+    <canvas id="ingredient-canvas"></canvas>
+    <div class="ingredient-text left" id="tree-left">FROM THE <br> ORCHARDS </div>
+    <div class="ingredient-text right" id="tree-right">OF NEW <br>ZEALAND</div>
+    <div class="ingredient-text left" id="fall-left">MANDARINS ARE PRESSED</div>
+    <div class="ingredient-text right" id="fall-right">TO RELEASE OIL</div>
+    <div class="ingredient-text left" id="split-left">RICH IN</div>
+    <div class="ingredient-text right" id="split-right">VITAMIN C</div>
+  </div>
+
+  <!-- Ingredients Section - Empty sections for scroll height -->
+  <section class="ingredient-section" id="mandarin-tree"></section>
+  <section class="ingredient-section" id="mandarin-fall"></section>
+  <section class="ingredient-section" id="mandarin-split"></section>
+  <section class="ingredient-section" id="mandarin-end"></section>
+  <section class="ingredient-section" id="mandarin-final"></section>
+  <section class="ingredient-section" id="mandarin-outro"></section>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+
+</html>
