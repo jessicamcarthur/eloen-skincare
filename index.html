@@ -4,8 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OLEHENRIKSEN – Bright Eye Crème</title>
+  <title>Éloen – Bright Eye Crème</title>
   <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="src/style.css" />
 
@@ -30,7 +34,7 @@
       <iconify-icon icon="lucide:search"></iconify-icon>
     </div>
 
-    <img class="logo" src="public/logo.png" alt="OLEHENRIKSEN logo">
+    <h1 class="logo">Éloen</h1>
 
     <div class="nav-right">
       <iconify-icon icon="lucide:user"></iconify-icon>
@@ -46,7 +50,8 @@
     </div>
 
     <div class="product-text">
-      <h2>A vitamin c boost<br>to brighten your eyes<br></h2>
+      <h2>wake up brighter<br>with vitamin C<br></h2>
+      <h3>Feel refreshed with our best selling eye cream</h3>
     </div>
   </main>
 
@@ -56,40 +61,61 @@
   </footer>
 
   <!-- Concerns Section -->
-  <section class="concern-section" id="concern-1">
-    <h3 class="concern-text">DEHYDRATION</h3>
+  <section class="scroll-text-section">
+    <div class="scroll-text-container">
+      <div class="animated-concern-text" id="concernText">
+        When your skin feels dry, looks uneven, or has lost its tone, reach for this product.
+      </div>
+    </div>
   </section>
 
-  <section class="concern-section" id="concern-2">
-    <h3 class="concern-text">WRINKLES</h3>
-  </section>
+  <!-- SPACER before ingredients -->
+  <section class="ingredient-spacer"></section>
 
-  <section class="concern-section" id="concern-3">
-    <h3 class="concern-text">UNEVEN TONE</h3>
-  </section>
+  <!-- Ingredient scroll sections -->
+  <section class="ingredient-section" id="mandarin-tree"></section>
+  <section class="ingredient-section" id="mandarin-fall"></section>
+  <section class="ingredient-section" id="mandarin-split"></section>
+  <section class="ingredient-section" id="mandarin-end"></section>
 
-  <!-- INGREDIENTS SECTION -->
+  <!-- INGREDIENTS CANVAS CONTAINER - Fixed position overlay -->
   <div class="ingredient-canvas-container">
     <canvas id="ingredient-canvas"></canvas>
-    
+
     <!-- Tree Section Text -->
-    <div class="ingredient-text left" id="tree-left">FROM THE <br> ORCHARDS </div>
+    <div class="ingredient-text left" id="tree-left">FROM THE <br> ORCHARDS</div>
     <div class="ingredient-text right" id="tree-right">OF NEW <br>ZEALAND</div>
-    
+
     <!-- Fall Section Text -->
     <div class="ingredient-text left" id="fall-left">MANDARINS ARE<br>PRESSED</div>
     <div class="ingredient-text right" id="fall-right">TO RELEASE<br>CITRUS OIL</div>
-    
-    <!-- Split Section Text (for future use) -->
-    <div class="ingredient-text left" id="split-left">RICH IN</div>
-    <div class="ingredient-text right" id="split-right">VITAMIN C</div>
+
+    <!-- Split Section Text -->
+    <div class="ingredient-text left" id="split-left">RICH IN<br>VITAMIN C</div>
+    <div class="ingredient-text right" id="split-right">IT BOOSTS<br>NATURAL GLOW</div>
   </div>
 
-  <!-- Ingredients Section - Empty sections for scroll height -->
-  <section class="ingredient-section" id="mandarin-split"></section>
-  <section class="ingredient-section" id="mandarin-end"></section>
-  <section class="ingredient-section" id="mandarin-final"></section>
-  <section class="ingredient-section" id="mandarin-outro"></section>
+  <div class="benefits-canvas-container">
+    <canvas id="benefits-canvas"></canvas>
+  </div>
+
+  <section class="benefits-section">
+    <div class="benefit-word" id="hydration">HYDRATION</div>
+  </section>
+
+  <section class="benefits-spacer"></section>
+
+  <section class="benefits-section">
+    <div class="benefit-word" id="brightness">BRIGHTNESS</div>
+  </section>
+
+  <section class="benefits-spacer"></section>
+
+  <section class="benefits-section">
+    <div class="benefit-word" id="protection">PROTECTION</div>
+  </section>
+
+  <section class="benefits-spacer"></section>
 
   <script type="module" src="src/main.js"></script>
 </body>
