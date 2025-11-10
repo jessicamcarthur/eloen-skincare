@@ -98,7 +98,7 @@ scene.add(topLight);
 const loader = new THREE.GLTFLoader();
 
 // Load main jar model
-loader.load('public/cream-jar.glb', (gltf) => {
+loader.load('/cream-jar.glb', (gltf) => {
   const model = gltf.scene;
   model.position.set(-4, -1, 0);
   model.rotation.set(
