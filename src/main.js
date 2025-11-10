@@ -132,7 +132,7 @@ loader.load('/cream-jar.glb', (gltf) => {
 
   scene.add(model);
 
-  loader.load('public/wedge.glb', (wedgeGltf) => {
+  loader.load('/wedge.glb', (wedgeGltf) => {
     const wedge = wedgeGltf.scene;
     wedge.position.set(-0.36, 0.72, -0.42);
     wedge.rotation.set(-0.65, Math.PI * 1.20, 0.34);
@@ -161,7 +161,7 @@ loader.load('/cream-jar.glb', (gltf) => {
     model.userData.wedge = wedge;
   });
 
-  loader.load('public/leaves.glb', (leavesGltf) => {
+  loader.load('/leaves.glb', (leavesGltf) => {
     const leaves = leavesGltf.scene;
     leaves.position.set(-1.03, -0.24, 0.8);
     leaves.rotation.set(-0.12, Math.PI * 2.11, 0.10);
@@ -403,7 +403,7 @@ const hideSplitMandarin = () => {
 
 // Load mandarin tree PNG as a texture
 const textureLoader = new THREE.TextureLoader();
-textureLoader.load('public/mandarin-tree2.png', (texture) => {
+textureLoader.load('/mandarin-tree2.png', (texture) => {
   texture.encoding = THREE.sRGBEncoding;
   texture.minFilter = THREE.LinearMipmapLinearFilter;
   texture.magFilter = THREE.LinearFilter;
@@ -429,7 +429,7 @@ textureLoader.load('public/mandarin-tree2.png', (texture) => {
   ingredientScene.add(mandarinTree);
 
   // Load mandarin fruit
-  loader.load('public/mandarin.glb', (gltf) => {
+  loader.load('/mandarin.glb', (gltf) => {
     mandarinFruit = gltf.scene;
     mandarinFruit.position.set(0, 4, 0);
     mandarinFruit.scale.set(0.5, 0.5, 0.5);
@@ -456,7 +456,7 @@ textureLoader.load('public/mandarin-tree2.png', (texture) => {
     ingredientScene.add(mandarinFruit);
 
     // Load split mandarin
-    loader.load('public/split-mandarin.glb', (gltf) => {
+    loader.load('/split-mandarin.glb', (gltf) => {
       splitMandarin = gltf.scene;
       splitMandarin.position.set(0.16, -5.1, 1);
       splitMandarin.scale.set(0.9, 0.9, 0.9);
@@ -890,7 +890,7 @@ if (benefitsCanvas) {
     ScrollTrigger.refresh();
   };
 
-  loader.load('public/cream-jar.glb', (gltf) => {
+  loader.load('/cream-jar.glb', (gltf) => {
     const baseModel = gltf.scene;
 
     const jarConfigs = [
