@@ -77,7 +77,8 @@ canvas#webgl {
   height: 100vh !important;
   pointer-events: none;
   z-index: 1;
-  transform: translateX(-15%);
+  transform: translateX(-15%) translateZ(0);
+  backface-visibility: hidden;
 }
 
 .product-visual {
@@ -142,7 +143,9 @@ canvas#webgl {
   opacity: 0; 
   letter-spacing: 3px;
   line-height: 1.1;
-  visibility: hidden;  
+  visibility: hidden;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .ingredient-section {
@@ -157,7 +160,7 @@ canvas#webgl {
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 10;
+  z-index: 0;
   pointer-events: none;
 }
 
@@ -169,7 +172,9 @@ canvas#ingredient-canvas {
   height: 100vh !important;
   pointer-events: none;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  visibility: hidden;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .ingredient-text {
@@ -179,14 +184,16 @@ canvas#ingredient-canvas {
   color: #c66a1e;
   text-transform: uppercase;
   letter-spacing: 2px;
+  line-height: 1.2;
   opacity: 0;
   visibility: hidden;
   z-index: 150;
   top: 50vh;
-  transform: translateY(-50%);
+  transform: translateY(-50%) translateZ(0);
   pointer-events: none;
   padding: 1rem 2rem;
   border-radius: 8px;
+  backface-visibility: hidden;
 }
 
 .ingredient-text.left {
